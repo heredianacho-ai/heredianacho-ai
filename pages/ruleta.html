@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta de Colores - Magic: The Gathering</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-text">
+            <h1>Ruleta de Colores</h1>
+        </div>
+    </header>
+    <main>
+        <div class="ruleta-container">
+            <div id="resultadoRuleta" class="resultado-ruleta"></div>
+            <div class="flecha-indicador"></div>
+            <canvas id="ruleta" class="ruleta" width="480" height="480"></canvas>
+            <button class="girar-btn" id="girarBtn">Girar Ruleta</button>
+            <p style="margin-top: 24px;"><a href="index.html">&larr; Volver al inicio</a></p>
+        </div>
+    </main>
+    <script src="../js/ruleta.js"></script>
+</body>
+</html>
