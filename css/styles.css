@@ -1,69 +1,124 @@
+/* === NAVBAR === */
+/* Fondo y bordes del menú */
+.navbar-brand img {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.container.justify-content-center {
+    width: auto;
+    max-width: 120px;
+    justify-content: center;
+    display: grid !important;
+    grid-template-columns: auto;
+}
+
+.img-small {
+    width: fit-content;
+    height: 40px;
+}
+
+.dropdown-menu.show {
+    display: block;
+    background-color: #edeae6;
+    border-radius: 8px;
+    border: rgb(201, 198, 198) solid;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Ítems del menú */
+.dropdown-item {
+    color: #171010;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover */
+.dropdown-item:hover {
+    background-color: #333;
+    color: #ffd700;
+}
+
+/* Ítem activo */
+.dropdown-item.active {
+    background-color: #444;
+    font-weight: bold;
+}
+
+/* Flecha del toggle */
+.dropdown-toggle::after {
+    border-top-color: #ffd700;
+}
+
+
 /* === EFECTO FUEGO === */
 .fuego-marco {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
 }
 
 .llama {
-  position: absolute;
-  bottom: 0;
-  width: 10px;
-  height: 35px;
-  background: radial-gradient(circle, rgba(255, 140, 0, 0.8) 0%, rgba(255, 0, 0, 0) 70%);
-  animation: flame 1s infinite ease-in-out;
-  border-radius: 50%;
-  filter: blur(4px);
-  opacity: 0.7;
+    position: absolute;
+    bottom: 0;
+    width: 10px;
+    height: 35px;
+    background: radial-gradient(circle, rgba(255, 140, 0, 0.8) 0%, rgba(255, 0, 0, 0) 70%);
+    animation: flame 1s infinite ease-in-out;
+    border-radius: 50%;
+    filter: blur(4px);
+    opacity: 0.7;
 }
 
 @keyframes flame {
-  0% {
-    transform: scaleY(1) translateY(0);
-    opacity: 0.6;
-  }
-  50% {
-    transform: scaleY(2) translateY(-15px);
-    opacity: 1;
-  }
-  100% {
-    transform: scaleY(1) translateY(0);
-    opacity: 0.6;
-  }
+    0% {
+        transform: scaleY(1) translateY(0);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scaleY(2) translateY(-15px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleY(1) translateY(0);
+        opacity: 0.6;
+    }
 }
 
 /* === EFECTO LLUVIA === */
 .lluvia-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
 }
 
 .gota {
-  position: absolute;
-  top: -10px;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: rgba(44, 115, 196, 0.963);
-  animation: caer 1.5s linear infinite;
+    position: absolute;
+    top: -10px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(44, 115, 196, 0.963);
+    animation: caer 1.5s linear infinite;
 }
 
 @keyframes caer {
-  to {
-    transform: translateY(100vh);
-    opacity: 0;
-  }
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
 }
 
 /* === EFECTO HOJA === */
@@ -104,6 +159,7 @@
         opacity: 1;
     }
 }
+
 /* === EFECTO HUMO === */
 
 .humo {
@@ -240,10 +296,12 @@
         font-size: 0.98em;
     }
 
-    .social-aside,
+    .social-aside {
+        width: auto !important;
+    }
     .deck-aside {
         max-width: 99vw;
-        width: 99vw;
+        width: auto;
         min-width: unset;
         margin: 8px auto 0 auto;
         border-radius: 8px;
@@ -338,9 +396,6 @@
 /* === FONDOS DE BODY POR COLOR === */
 body.body-blanco {
     background: #fffbe7;
-    position: relative;
-    overflow: hidden;
-
 }
 
 body.body-azul {
@@ -485,7 +540,7 @@ header {
     box-shadow: 0 2px 12px rgba(34, 34, 34, 0.07);
     padding: 18px 22px 14px 22px;
     z-index: 100;
-    width: 140px;
+    width: auto;
     font-family: inherit;
 }
 
