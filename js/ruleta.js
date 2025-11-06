@@ -68,29 +68,48 @@ dibujarRuleta();
 document.getElementById('girarBtn').onclick = function () {
     if (girando) return;
     girando = true;
-    let vueltas = Math.floor(Math.random() * 4) + 8;
-    let destino = Math.random() * 2 * Math.PI;
-    let total = vueltas * 2 * Math.PI + destino;
+    this.disabled = true;
+
+    let dur = 10000; // duración total en ms
     let t = 0;
-    let dur = 5200;
-    let inicio = giro;
+    let giroInicial = giro;
+    let giroTotal = 20 * 2 * Math.PI + Math.random() * 2 * Math.PI; // 20 vueltas + destino aleatorio
+
+    function easeOutCubic(t) {
+        return 1 - Math.pow(1 - t, 3);
+    }
+
     function animar() {
-        t += 16;
+        let dt = 16;
+        t += dt;
+
         let prog = Math.min(t / dur, 1);
-        let eased = 1 - Math.pow(1 - prog, 3);
-        giro = inicio + (total - inicio) * eased;
+        let eased = easeOutCubic(prog);
+        giro = giroInicial + giroTotal * eased;
+
         dibujarRuleta(giro);
+
         if (prog < 1) {
             requestAnimationFrame(animar);
         } else {
             girando = false;
+            document.getElementById('girarBtn').disabled = false;
+
             let angSector = ((-Math.PI / 2 - giro) % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI);
             let idxFinal = Math.floor(angSector / angulo) % num;
             mostrarResultado(idxFinal);
+
+            let sector = document.querySelector(`.sector[data-idx="${idxFinal}"]`);
+            if (sector) {
+                sector.classList.add('destello');
+                setTimeout(() => sector.classList.remove('destello'), 1000);
+            }
         }
     }
+
     requestAnimationFrame(animar);
 };
+
 function mostrarResultado(idx) {
     const combo = colorCombos[idx];
     let colores = combo.colores.join(', ');

@@ -786,12 +786,12 @@ footer {
 .flecha-indicador {
     width: 0;
     height: 0;
-    border-left: 32px solid transparent;
-    border-right: 32px solid transparent;
-    border-bottom: 48px solid #1976d2;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid #f43712;
     margin: 0 auto;
     position: relative;
-    top: 8px;
+    transform: rotate(180deg);
 }
 
 .girar-btn {
@@ -817,4 +817,5 @@ footer {
     color: #1976d2;
     font-weight: bold;
     min-height: 32px;
+    text-align: center;
 }
