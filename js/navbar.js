@@ -1,13 +1,15 @@
-fetch('../components/navbar.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('navbar').innerHTML = html;
+document.addEventListener("DOMContentLoaded", () => {
+  const isGitHub = window.location.hostname.includes("github.io");
+  const repoName = "heredianacho-ai";
+  const basePath = isGitHub ? `/${repoName}/` : "/";
 
-    // Resaltar la página activa
-    const current = location.pathname.split('/').pop();
-    document.querySelectorAll('.nav-link').forEach(link => {
-      if (link.getAttribute('href') === current) {
-        link.classList.add('active');
-      }
-    });
-  });
+  fetch(`${basePath}components/navbar.html`)
+    .then(res => {
+      if (!res.ok) throw new Error(`Error al cargar navbar: ${res.status}`);
+      return res.text();
+    })
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+    })
+    .catch(err => console.error("Error cargando navbar:", err));
+});
