@@ -1,0 +1,62 @@
+@import 'variables';
+@import 'mixins';
+
+// Reset / base
+body {
+  font-family: $font-family-base;
+  background: $neutral-bg;
+  color: $text;
+  margin: 0;
+  padding: 0;
+}
+
+.logo-magic-bar {
+  width: 100vw;
+  background: #e7dac7;
+  margin-left: calc(-50vw + 50%);
+  padding: 16px 0 8px 0;
+  @include center-flex;
+}
+
+.logo-magic {
+  display: block;
+  max-width: $logo-max;
+  width: 100%;
+  height: auto;
+  background: #000;
+  margin: 0 auto;
+  padding: 8px 0;
+  border-radius: 24px;
+}
+
+header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #faf9f6;
+  padding: 24px;
+  border-radius: $radius-lg;
+  box-shadow: 0 2px 12px $shadow;
+  border: none;
+}
+
+article {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #faf9f6;
+  padding: 5px 25px 25px 25px;
+  border-radius: $radius-lg;
+  box-shadow: 0 2px 12px $shadow;
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  margin: 40px 0 10px 0;
+  color: #888;
+  font-size: 0.95em;
+}

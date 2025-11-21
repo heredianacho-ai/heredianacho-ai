@@ -1,0 +1,17 @@
+// Mixins comunes
+@mixin transition($prop, $time: 0.2s, $timing: ease) {
+  transition: #{$prop} #{$time} #{$timing};
+}
+
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin responsive-font($size) {
+  font-size: $size;
+  @media (max-width: $bp-sm) {
+    font-size: calc(#{$size} * 0.95);
+  }
+}

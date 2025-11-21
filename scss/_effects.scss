@@ -1,0 +1,41 @@
+// Efectos decorativos (fuego, lluvia, hoja, humo)
+
+.fuego-marco {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.llama {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 35px;
+  background: radial-gradient(circle, rgba(255, 140, 0, 0.8) 0%, rgba(255, 0, 0, 0) 70%);
+  animation: flame 1s infinite ease-in-out;
+  border-radius: 50%;
+  filter: blur(4px);
+  opacity: 0.7;
+}
+
+@keyframes flame {
+  0% { transform: scaleY(1) translateY(0); opacity: 0.6; }
+  50% { transform: scaleY(2) translateY(-15px); opacity: 1; }
+  100% { transform: scaleY(1) translateY(0); opacity: 0.6; }
+}
+
+.lluvia-container { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; pointer-events: none; overflow: hidden; z-index: 0; }
+.gota { position: absolute; top: -10px; width: 5px; height: 5px; border-radius: 50%; background: rgba(44,115,196,0.963); animation: caer 1.5s linear infinite; }
+
+@keyframes caer { to { transform: translateY(100vh); opacity: 0; } }
+
+.hoja { position: fixed; top: -10vh; width: 40px; z-index: 0; animation: caer 10s infinite linear; opacity: 1; pointer-events: none; }
+
+.humo { position: fixed; bottom: -60px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; border-radius: 50%; background: radial-gradient(circle, rgba(128,0,128,0.8) 0%, rgba(39,34,44,0) 70%); filter: blur(8px); animation: ascenderHumo 3s infinite linear; opacity: 0.7; pointer-events: none; }
+
+@keyframes ascenderHumo { 0% { transform: translateX(0vw) translateY(0vh) scale(1); opacity: 0.2; } 25% { transform: translateX(10vw) translateY(-20vh) scale(1.2); opacity: 0.4; } 50% { transform: translateX(15vw) translateY(-60vh) scale(1.6); opacity: 0.4; } 75% { transform: translateX(-15vw) translateY(-80vh) scale(1.8); opacity: 0.3; } 100% { transform: translateX(0vw) translateY(-100vh) scale(2); opacity: 0; } }

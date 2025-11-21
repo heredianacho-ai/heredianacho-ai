@@ -1,0 +1,38 @@
+@import 'variables';
+
+/* Pentágono y colores */
+.pentagon-colors {
+  background: #fff;
+  border-radius: 50%;
+  border: 9px solid #ccb2df;
+  box-shadow: 0 4px 24px $shadow;
+  width: 420px;
+  height: 420px;
+  margin: 60px auto 24px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  background-image: url('https://images.ctfassets.net/s5n2t79q9icq/7ea8LeahlcH6JCvZEIiX0y/41829b054a6c8b5f9952e1413736bac5/bveqlebbh3439bqbl_1023x700.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.pentagon-colors .color { position: absolute; left: 50%; top: 50%; }
+.pentagon-colors .blanco { transform: translate(-50%, -50%) rotate(0deg) translateY(-210px); }
+.pentagon-colors .azul { transform: translate(-50%, -50%) rotate(72deg) translateY(-210px); }
+.pentagon-colors .negro { transform: translate(-50%, -50%) rotate(144deg) translateY(-210px); }
+.pentagon-colors .rojo { transform: translate(-50%, -50%) rotate(216deg) translateY(-210px); }
+.pentagon-colors .verde { transform: translate(-50%, -50%) rotate(288deg) translateY(-210px); }
+
+.circle-frame { display:flex; align-items:center; justify-content:center; width:90px; height:90px; border-radius:50%; margin:0 auto 10px auto; box-shadow:0 2px 8px rgba(34,34,34,0.10); }
+.circle-frame img { width:65px; height:65px; border-radius:75%; object-fit:contain; }
+
+/* Fondo por color */
+body.body-blanco { background: $white-bg; }
+body.body-azul { background: $light-blue; }
+body.body-negro { background: #b6b5b7; }
+body.body-rojo { background: #ffe7e7; }
+body.body-verde { background: url('../img/hojas-laterales.png') repeat-y left top, url('../img/hojas-laterales.png') repeat-y right top, linear-gradient(to bottom, $verde-gradient-start, $verde-gradient-mid, $verde-gradient-end, #c0e790); background-repeat: no-repeat; background-size: cover; color: #1b3b1b; }

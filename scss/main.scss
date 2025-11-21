@@ -1,0 +1,8 @@
+// Archivo principal SCSS que importa todos los parciales
+@import 'variables';
+@import 'mixins';
+@import 'base';
+@import 'effects';
+@import 'layout';
+@import 'components';
+@import 'responsive';
