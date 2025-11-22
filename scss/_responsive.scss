@@ -1,37 +1,206 @@
 @import 'variables';
 
+// Local helper variables for responsive tweaks
+$pentagon-mobile-size: 90vw;
+$pentagon-mobile-max: 300px;
+$logo-mobile-max: 50vw;
+
 @media (max-width: $bp-sm) {
-  body { font-size: 1em; }
-  .logo-magic-bar { display: flex; justify-content: center; align-items: center; padding: 6px 0 2px 0; }
-  .logo-magic { max-width: 50vw !important; max-height: 60px; margin: 0 auto; display: block; padding: 2px 0; border-radius: 10px; }
-  .header-text h1 { font-size: 1.1em; margin: 10px 0 8px 0; }
-  .pentagon-colors { width: 90vw; max-width: 300px !important; height: 90vw; max-height: 300px !important; margin: 35px auto 8px auto !important; border-width: 4px; padding: 0; display:flex; justify-content:center; align-items:center; }
-  .circle-frame { width: 50px !important; height: 50px !important; margin: 0 auto 2px auto; }
-  .circle-frame img { width: 45px !important; height: 45px !important; }
-  .color.blanco, .color.azul, .color.negro, .color.rojo, .color.verde { transform: none !important; }
-  .pentagon-colors .blanco { transform: translate(-50%, -180%) rotate(0deg) translateY(-60px) !important; }
-  .pentagon-colors .azul { transform: translate(100%, -50%) rotate(72deg) translateY(-60px) !important; }
-  .pentagon-colors .negro { transform: translate(10%, 60%) rotate(144deg) translateY(-60px) !important; }
-  .pentagon-colors .rojo { transform: translate(-120%, 60%) rotate(216deg) translateY(-60px) !important; }
-  .pentagon-colors .verde { transform: translate(-200%, -50%) rotate(288deg) translateY(-60px) !important; }
-  main { max-width: 99vw; padding: 6px 1vw; border-radius: 8px; font-size: 0.98em; }
-  .social-aside { width: auto !important; }
-  .deck-aside { max-width: 99vw; width: auto; min-width: unset; margin: 8px auto 0 auto; border-radius: 8px; font-size: 0.96em; position: static; box-sizing: border-box; }
-  .cartas-lista { gap: 4px; }
-  .carta-img { width: 60px; border-radius: 7px; }
-  article { font-size: 0.96em; padding: 6px 1vw; }
-  footer { font-size: 0.88em !important; margin: 12px 0 4px 0 !important; }
-  .ruleta { width: 90vw; max-width: 220px; height: 90vw; max-height: 220px; border-width: 4px; }
-  .flecha-indicador { border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 18px solid $blue; top: 1px; }
-  .girar-btn { font-size: 0.98em; padding: 8px 12px; margin: 12px 0 8px 0; }
-  .ruleta-container { margin-top: 10px; }
-  .resultado-ruleta { font-size: 1em; margin-top: 6px; min-height: 18px; }
+    body {
+        font-size: 1em;
+    }
+
+    .logo-magic-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px 0 2px 0;
+
+        .logo-magic {
+            max-width: $logo-mobile-max;
+            max-height: 60px;
+            margin: 0 auto;
+            display: block;
+            padding: 2px 0;
+            border-radius: 10px;
+        }
+    }
+
+    .header-text {
+        h1 {
+            font-size: 1.1em;
+            margin: 10px 0 8px 0;
+        }
+    }
+
+    .pentagon-colors {
+        width: $pentagon-mobile-size;
+        max-width: $pentagon-mobile-max;
+        height: $pentagon-mobile-size;
+        max-height: $pentagon-mobile-max;
+        margin: 35px auto 8px auto;
+        border-width: 4px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .circle-frame {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 2px auto;
+
+            img {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        // On small screens avoid transforms on color markers and apply adjusted positions
+        .blanco {
+            transform: translate(-50%, -180%) rotate(0deg) translateY(-60px);
+        }
+
+        .azul {
+            transform: translate(100%, -50%) rotate(72deg) translateY(-60px);
+        }
+
+        .negro {
+            transform: translate(10%, 60%) rotate(144deg) translateY(-60px);
+        }
+
+        .rojo {
+            transform: translate(-120%, 60%) rotate(216deg) translateY(-60px);
+        }
+
+        .verde {
+            transform: translate(-200%, -50%) rotate(288deg) translateY(-60px);
+        }
+    }
+
+    main {
+        max-width: 99vw;
+        padding: 6px 1vw;
+        border-radius: 8px;
+        font-size: 0.98em;
+    }
+
+    .social-aside {
+        width: auto;
+    }
+
+    .deck-aside {
+        max-width: 99vw;
+        width: auto;
+        min-width: unset;
+        margin: 8px auto 0 auto;
+        border-radius: 8px;
+        font-size: 0.96em;
+        position: static;
+        box-sizing: border-box;
+    }
+
+    .cartas-lista {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .carta-img {
+        display: block;
+        width: 60px;
+        height: auto;
+        border-radius: 7px;
+        box-sizing: border-box;
+    }
+
+    article {
+        font-size: 0.96em;
+        padding: 6px 1vw;
+    }
+
+    footer {
+        font-size: 0.88em;
+        margin: 12px 0 4px 0;
+    }
+
+    .ruleta {
+        width: $pentagon-mobile-size;
+        max-width: 220px;
+        height: $pentagon-mobile-size;
+        max-height: 220px;
+        border-width: 4px;
+        justify-content: center;
+    }
+
+    .flecha-indicador {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 18px solid $blue;
+        top: 1px;
+    }
+
+    .girar-btn {
+        font-size: 0.98em;
+        padding: 8px 12px;
+        margin: 12px 0 8px 0;
+    }
+
+    .ruleta-container {
+        margin-top: 10px;
+    }
+
+    .resultado-ruleta {
+        font-size: 1em;
+        margin-top: 6px;
+        min-height: 18px;
+    }
 }
 
+.girar-btn {
+    font-size: 0.98em;
+    padding: 8px 12px;
+    margin: 12px 0 8px 0;
+}
+
+.ruleta-container {
+    margin-top: 10px;
+}
+
+.resultado-ruleta {
+    font-size: 1em;
+    margin-top: 6px;
+    min-height: 18px;
+}
+
+
 @media (max-width: $bp-xs) {
-  .ruleta { max-width: 250px; max-height: 340px; border-width: 5px; }
-  .flecha-indicador { border-left: 18px solid transparent; border-right: 18px solid transparent; border-bottom: 32px solid $blue; top: 4px; }
-  .girar-btn { font-size: 1em; padding: 10px 18px; margin: 18px 0 12px 0; }
-  .ruleta-container { margin-top: 18px; }
-  .resultado-ruleta { font-size: 1.1em; margin-top: 10px; min-height: 24px; }
+    .ruleta {
+        max-width: 250px;
+        max-height: 340px;
+        border-width: 5px;
+    }
+
+    .flecha-indicador {
+        border-left: 18px solid transparent;
+        border-right: 18px solid transparent;
+        border-bottom: 32px solid $blue;
+        top: 4px;
+    }
+
+    .girar-btn {
+        font-size: 1em;
+        padding: 10px 18px;
+        margin: 18px 0 12px 0;
+    }
+
+    .ruleta-container {
+        margin-top: 18px;
+    }
+
+    .resultado-ruleta {
+        font-size: 1.1em;
+        margin-top: 10px;
+        min-height: 24px;
+    }
 }

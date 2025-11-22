@@ -1,4 +1,3 @@
-// Mixins comunes
 @mixin transition($prop, $time: 0.2s, $timing: ease) {
   transition: #{$prop} #{$time} #{$timing};
 }
