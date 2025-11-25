@@ -19,34 +19,55 @@
     background-size: cover;
     background-position: center center;
 
-    .color { 
-        position: absolute; 
-        left: 50%; 
-        top: 50%; 
+    .color {
+        position: absolute;
+        left: 50%;
+        top: 50%;
     }
-    .blanco { 
+
+    .blanco {
         transform: translate(-50%, -50%) rotate(0deg) translateY(-210px);
-        .circle-frame { background: $white-pentagon; border: 9px solid $white-pentagon-border;}
+
+        .circle-frame {
+            background: $white-pentagon;
+            border: 9px solid $white-pentagon-border;
+        }
     }
 
-    .azul { 
+    .azul {
         transform: translate(-50%, -50%) rotate(72deg) translateY(-210px);
-        .circle-frame { background: $blue-pentagon; border: 9px solid $blue-pentagon-border;}
+
+        .circle-frame {
+            background: $blue-pentagon;
+            border: 9px solid $blue-pentagon-border;
+        }
     }
 
-    .negro { 
+    .negro {
         transform: translate(-50%, -50%) rotate(144deg) translateY(-210px);
-        .circle-frame { background: $black-pentagon; border: 9px solid $black-pentagon-border;}
+
+        .circle-frame {
+            background: $black-pentagon;
+            border: 9px solid $black-pentagon-border;
+        }
     }
 
-    .rojo { 
+    .rojo {
         transform: translate(-50%, -50%) rotate(216deg) translateY(-210px);
-        .circle-frame { background: $red-pentagon; border: 9px solid $red-pentagon-border;}
+
+        .circle-frame {
+            background: $red-pentagon;
+            border: 9px solid $red-pentagon-border;
+        }
     }
 
-    .verde { 
+    .verde {
         transform: translate(-50%, -50%) rotate(288deg) translateY(-210px);
-        .circle-frame { background: $green-pentagon; border: 9px solid $green-pentagon-border;}
+
+        .circle-frame {
+            background: $green-pentagon;
+            border: 9px solid $green-pentagon-border;
+        }
     }
 }
 
@@ -60,6 +81,7 @@
     margin: 0 auto 10px auto;
     box-shadow: 0 2px 8px rgba(34, 34, 34, 0.1);
 }
+
 .circle-frame img {
     width: 65px;
     height: 65px;
@@ -74,25 +96,68 @@
 
 /* Fondo por color */
 body {
-    &.body-blanco { 
-        background: $white-bg; 
+    &.body-blanco {
+        background: $white-bg;
     }
-    &.body-azul { 
-        background: $blue-bg; 
+
+    &.body-azul {
+        background: $blue-bg;
     }
-    &.body-negro { 
-        background: $grey-bg; 
+
+    &.body-negro {
+        background: $grey-bg;
     }
-    &.body-rojo { 
-        background: $red-bg; 
+
+    &.body-rojo {
+        background: $red-bg;
     }
-    &.body-verde { 
-        background: 
-            url('../img/hojas-laterales.png') repeat-y left top, 
-            url('../img/hojas-laterales.png') repeat-y right top, 
+
+    &.body-verde {
+        background:
+            url('../img/hojas-laterales.png') repeat-y left top,
+            url('../img/hojas-laterales.png') repeat-y right top,
             linear-gradient(to bottom, $verde-gradient-start, $verde-gradient-mid, $verde-gradient-end, #c0e790);
         background-repeat: no-repeat;
         background-size: cover;
-        color: #1b3b1b; 
+        color: #1b3b1b;
     }
 }
+
+/* Ruleta */
+
+ .ruleta {
+        width: $ruleta-width-size;
+        max-width: 750px;
+        height: $ruleta-height-size;
+        max-height: 750px;
+        border-width: 4px;
+    }
+
+    .flecha-indicador {
+        border-left: 18px solid transparent;
+        border-right: 18px solid transparent;
+        border-bottom: 32px solid $blue;
+        top: 4px;
+    }
+
+    .girar-btn {
+        font-size: 0.98em;
+        padding: 8px 12px;
+        margin: 12px 0 8px 0;
+    }
+
+    .ruleta-container {
+        margin-top: 10px;
+        align-content: center;
+        justify-content: flex-start;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resultado-ruleta {
+        font-size: 1em;
+        margin-top: 6px;
+        min-height: 18px;
+    }

@@ -1,6 +1,6 @@
 (function () {
   const hojaSrc = "img/hoja1.png"; // Ruta relativa limpia
-  const cantidadHojas = 20;
+  const cantidadHojas = 10; // Reducido de 20 a 10 para mejor rendimiento
 
   // Detectar si ya hay hojas activas
   if (document.querySelectorAll("img.hoja").length > 0) return;

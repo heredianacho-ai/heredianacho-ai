@@ -71,7 +71,7 @@ document.getElementById('girarBtn').onclick = function () {
     this.disabled = true;
 
     let dur = 10000; // duración total en ms
-    let t = 0;
+    let startTime = Date.now();
     let giroInicial = giro;
     let giroTotal = 20 * 2 * Math.PI + Math.random() * 2 * Math.PI; // 20 vueltas + destino aleatorio
 
@@ -80,10 +80,8 @@ document.getElementById('girarBtn').onclick = function () {
     }
 
     function animar() {
-        let dt = 16;
-        t += dt;
-
-        let prog = Math.min(t / dur, 1);
+        let elapsed = Date.now() - startTime;
+        let prog = Math.min(elapsed / dur, 1);
         let eased = easeOutCubic(prog);
         giro = giroInicial + giroTotal * eased;
 
