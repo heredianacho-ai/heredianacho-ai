@@ -30,9 +30,107 @@
             </article>
         </div>
     </header>
-    <main class="main-galeria">
+    
+    <main class="container my-5">
+        <div class="row">
+            <!-- Columna principal -->
+            <div class="col-lg-8">
+                <!-- Hero card -->
+                <div class="card shadow-lg mb-4" style="background: linear-gradient(135deg, #2d5016 0%, #4a7c59 100%); color: white;">
+                    <div class="card-body p-4">
+                        <h2 class="display-5 fw-bold mb-3">🌿 El Poder de la Naturaleza</h2>
+                        <p class="lead">El verde representa la fuerza de la naturaleza, el crecimiento, la vida y la conexión con el mundo natural.</p>
+                        <div class="row mt-4">
+                            <div class="col-6">
+                                <h6>🦕 Poder de Criaturas</h6>
+                                <div class="progress" style="height: 25px;">
+                                    <div class="progress-bar bg-success" style="width: 95%">95%</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <h6>💎 Aceleración de Maná</h6>
+                                <div class="progress" style="height: 25px;">
+                                    <div class="progress-bar bg-success" style="width: 98%">98%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <section class="cartas-galeria">
+                <div class="card shadow mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h4 class="mb-0">Fortalezas del Verde</h4>
+                    </div>
+                    <div class="card-body p-0">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-success">
+                                <tr>
+                                    <th style="width: 30%;">Aspecto</th>
+                                    <th>Descripción</th>
+                                    <th style="width: 20%;">Rating</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>🦖 Criaturas</strong></td>
+                                    <td>Las más grandes y poderosas del juego</td>
+                                    <td><span class="badge bg-success">10/10</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>💎 Maná</strong></td>
+                                    <td>Aceleración y fijación de maná</td>
+                                    <td><span class="badge bg-success">10/10</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>🔨 Remoción</strong></td>
+                                    <td>Destrucción de artefactos y encantamientos</td>
+                                    <td><span class="badge bg-warning text-dark">8/10</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>🌱 Crecimiento</strong></td>
+                                    <td>Tokens, contadores +1/+1, pump spells</td>
+                                    <td><span class="badge bg-success">9/10</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>🌳 Filosofía</strong></td>
+                                    <td>Armonía con la naturaleza y crecimiento</td>
+                                    <td><span class="badge bg-success">10/10</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="accordion mb-4" id="verdeAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button bg-success text-white" type="button" data-bs-toggle="collapse" data-bs-target="#ramp">
+                                🌲 Estrategia Ramp
+                            </button>
+                        </h2>
+                        <div id="ramp" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <strong>Ramp</strong> es la estrategia principal del verde: acelerar el maná para lanzar amenazas enormes antes que el oponente pueda reaccionar. Usa cartas como <em>Llanowar Elves</em>, <em>Cultivate</em> y <em>Explosive Vegetation</em>.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stompy">
+                                🦁 Stompy (Criaturas Grandes)
+                            </button>
+                        </h2>
+                        <div id="stompy" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Deck de criaturas grandes y eficientes que aplastan al oponente con poder bruto. Incluye bestias, hidras y elementales.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galería -->
+                <section class="cartas-galeria">
+                    <h3 class="mb-3">Criaturas Legendarias</h3>
             <div class="cartas-lista">
                 <figure><img
                         src="https://cards.scryfall.io/normal/front/c/c/ccac70d4-6e04-4802-8bb8-021368a40e14.jpg?1752944774"
@@ -65,7 +163,68 @@
                         src="https://cards.scryfall.io/normal/front/3/d/3d69a3e0-6a2e-475a-964e-0affed1c017d.jpg?1722384747"
                         alt="Carta 10" class="carta-img"></figure>
             </div>
-        </section>
+                </section>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card shadow mb-4 border-success">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">🌿 Esencia del Verde</h5>
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-3">
+                            <p class="fst-italic">"La naturaleza siempre encuentra el camino."</p>
+                        </blockquote>
+                        <hr>
+                        <h6 class="text-success">Criaturas Icónicas:</h6>
+                        <ul class="list-unstyled">
+                            <li>🐻 Bestias</li>
+                            <li>🐉 Hidras</li>
+                            <li>🧝 Elfos</li>
+                            <li>🌳 Treefolk</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card shadow mb-4">
+                    <div class="card-body">
+                        <h6 class="card-title">⚔️ Matchups</h6>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>vs Azul</span>
+                                <span class="text-warning">60%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-warning" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>vs Rojo</span>
+                                <span class="text-success">75%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-success" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>vs Negro</span>
+                                <span class="text-danger">45%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-danger" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-success" role="alert">
+                    <h6 class="alert-heading">💡 Tip Pro</h6>
+                    <p class="mb-0 small">Siempre prioriza la aceleración de maná en las primeras rondas.</p>
+                </div>
+            </div>
+        </div>
     </main>
     <div class="footer-container">
         <footer>

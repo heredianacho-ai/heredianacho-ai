@@ -98,6 +98,94 @@
 	}
 }
 
+/* Grid de 3 columnas para página rojo */
+.cartas-grid-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	
+	@media (max-width: 768px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	@media (max-width: $bp-sm) {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* === Layouts específicos por color === */
+
+// Hero Azul con gradiente animado
+.hero-azul {
+	background: linear-gradient(135deg, #0a2463 0%, #1e3a8a 25%, #3b82f6 50%, #1e3a8a 75%, #0a2463 100%);
+	background-size: 200% 200%;
+	animation: gradientShift 8s ease infinite;
+	box-shadow: inset 0 -5px 20px rgba(0,0,0,0.3);
+	
+	@keyframes gradientShift {
+		0% { background-position: 0% 50%; }
+		50% { background-position: 100% 50%; }
+		100% { background-position: 0% 50%; }
+	}
+}
+
+// Hover lift effect para cards
+.hover-lift {
+	transition: all 0.3s ease;
+	
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
+	}
+}
+
+// Layout Azul - Sidebar fijo
+.main-azul-layout {
+	.sidebar-azul {
+		position: sticky;
+		top: 20px;
+		height: fit-content;
+	}
+	
+	.nav-pills {
+		.nav-link {
+			color: $blue;
+			border: 2px solid transparent;
+			transition: all 0.3s;
+			
+			&:hover {
+				background: rgba(59, 130, 246, 0.1);
+				border-color: rgba(59, 130, 246, 0.3);
+			}
+			
+			&.active {
+				background: $blue;
+				border-color: $blue;
+			}
+		}
+	}
+}
+
+.hero-negro {
+	background: linear-gradient(135deg, #1a1a2e 0%, #2d1b3d 50%, #1a1a2e 100%);
+	
+	.stat-box {
+		background: rgba(255, 255, 255, 0.1);
+		padding: 20px;
+		border-radius: 12px;
+		backdrop-filter: blur(10px);
+		transition: all 0.3s;
+		
+		&:hover {
+			background: rgba(255, 255, 255, 0.15);
+			transform: translateY(-5px);
+		}
+		
+		h3 { font-size: 2em; margin-bottom: 10px; }
+		p { margin: 0; font-size: 0.9em; }
+	}
+}
+
 /* === NAVBAR y navegación principal (más anidado) === */
 .navbar {
 	background: #f7f6f4;

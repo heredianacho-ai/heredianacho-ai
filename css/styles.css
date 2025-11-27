@@ -467,6 +467,92 @@ body.body-verde {
   box-shadow: 0 4px 16px rgba(34, 34, 34, 0.18);
 }
 
+/* Grid de 3 columnas para página rojo */
+.cartas-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .cartas-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .cartas-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Layouts específicos por color === */
+.hero-azul {
+  background: linear-gradient(135deg, #0a2463 0%, #1e3a8a 25%, #3b82f6 50%, #1e3a8a 75%, #0a2463 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+  box-shadow: inset 0 -5px 20px rgba(0, 0, 0, 0.3);
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hover-lift {
+  transition: all 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.main-azul-layout .sidebar-azul {
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+.main-azul-layout .nav-pills .nav-link {
+  color: #1976d2;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+}
+.main-azul-layout .nav-pills .nav-link:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+.main-azul-layout .nav-pills .nav-link.active {
+  background: #1976d2;
+  border-color: #1976d2;
+}
+
+.hero-negro {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d1b3d 50%, #1a1a2e 100%);
+}
+.hero-negro .stat-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+}
+.hero-negro .stat-box:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+.hero-negro .stat-box h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.hero-negro .stat-box p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
 /* === NAVBAR y navegación principal (más anidado) === */
 .navbar {
   background: #f7f6f4;
@@ -571,9 +657,121 @@ body.body-verde {
     padding: 2px 0;
     border-radius: 10px;
   }
+  .header-text {
+    padding: 10px 15px;
+  }
   .header-text h1 {
-    font-size: 1.1em;
+    font-size: 1.3em;
     margin: 10px 0 8px 0;
+  }
+  .header-text p {
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+  .hero-azul,
+  .hero-negro {
+    padding: 30px 15px !important;
+  }
+  .hero-azul h1,
+  .hero-negro h1 {
+    font-size: 1.8em !important;
+  }
+  .hero-azul .lead,
+  .hero-negro .lead {
+    font-size: 1em !important;
+  }
+  .hero-azul .stat-box,
+  .hero-negro .stat-box {
+    margin-bottom: 15px;
+    padding: 15px !important;
+  }
+  .main-azul-layout,
+  .container-fluid {
+    padding: 0 10px;
+  }
+  .main-azul-layout .row,
+  .container-fluid .row {
+    margin: 0;
+  }
+  .main-azul-layout .sidebar-azul,
+  .container-fluid .sidebar-azul {
+    position: static !important;
+    margin-bottom: 20px;
+  }
+  .main-azul-layout .sidebar-azul .card,
+  .container-fluid .sidebar-azul .card {
+    margin-bottom: 15px;
+  }
+  .nav-pills,
+  .nav-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-pills .nav-item,
+  .nav-tabs .nav-item {
+    flex-shrink: 0;
+  }
+  .nav-pills .nav-item .nav-link,
+  .nav-tabs .nav-item .nav-link {
+    font-size: 0.85em;
+    padding: 8px 12px;
+    white-space: nowrap;
+  }
+  .hover-lift {
+    transform: none !important;
+  }
+  .card {
+    margin-bottom: 15px;
+  }
+  .card .card-body {
+    padding: 15px;
+  }
+  .card .card-header {
+    padding: 10px 15px;
+  }
+  .card .display-4 {
+    font-size: 2em;
+  }
+  .card h2 {
+    font-size: 1.5em;
+  }
+  .table-responsive {
+    font-size: 0.85em;
+  }
+  .table-responsive table {
+    min-width: 600px;
+  }
+  .table-responsive td,
+  .table-responsive th {
+    padding: 8px 6px;
+  }
+  .accordion .accordion-button {
+    font-size: 0.9em;
+    padding: 12px 15px;
+  }
+  .accordion .accordion-body {
+    font-size: 0.85em;
+    padding: 12px 15px;
+  }
+  .progress {
+    height: 6px !important;
+    margin-bottom: 8px;
+  }
+  .badge {
+    font-size: 0.75em;
+    padding: 4px 8px;
+  }
+  .alert {
+    font-size: 0.9em;
+    padding: 12px 15px;
+  }
+  .alert h5,
+  .alert h6 {
+    font-size: 1.1em;
+  }
+  .alert ul {
+    padding-left: 20px;
   }
   .pentagon-colors {
     width: 90vw;
@@ -631,11 +829,15 @@ body.body-verde {
     box-sizing: border-box;
   }
   .cartas-lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 4px;
   }
-  .carta-img {
-    width: 60px;
-    border-radius: 7px;
+  .cartas-lista .carta-img {
+    margin: auto;
+    max-width: 100%;
+    transition: 0.2s ease;
+    will-change: auto;
   }
   article {
     font-size: 0.96em;
@@ -679,6 +881,36 @@ body.body-verde {
   }
 }
 @media (max-width: 300px) {
+  .hero-azul,
+  .hero-negro {
+    padding: 20px 10px !important;
+  }
+  .hero-azul h1,
+  .hero-negro h1 {
+    font-size: 1.5em !important;
+  }
+  .hero-azul .display-3,
+  .hero-azul .display-4,
+  .hero-azul .display-5,
+  .hero-negro .display-3,
+  .hero-negro .display-4,
+  .hero-negro .display-5 {
+    font-size: 1.5em !important;
+  }
+  .card .card-body {
+    padding: 12px;
+  }
+  .card h2 {
+    font-size: 1.3em;
+  }
+  .card h3 {
+    font-size: 1.1em;
+  }
+  .nav-pills .nav-link,
+  .nav-tabs .nav-link {
+    font-size: 0.8em;
+    padding: 6px 10px;
+  }
   .ruleta {
     max-width: 250px;
     max-height: 340px;

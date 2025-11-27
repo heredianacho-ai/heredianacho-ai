@@ -28,10 +28,34 @@
             </article>
         </div>
     </header>
-    <main class="main-galeria">
+    
+    <main class="container-fluid px-4 py-4">
+        <!-- Banner dinámico -->
+        <div class="alert alert-danger text-center fw-bold mb-4" role="alert" style="font-size: 1.2em;">
+            🔥 PODER EXPLOSIVO • VELOCIDAD MÁXIMA • CAOS CONTROLADO 🔥
+        </div>
 
-        <section class="cartas-galeria">
-            <div class="cartas-lista">
+        <!-- Tabs de navegación -->
+        <ul class="nav nav-tabs mb-4" id="rojoTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="galeria-tab" data-bs-toggle="tab" data-bs-target="#galeria" type="button" role="tab">Galería Completa</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="destacadas-tab" data-bs-toggle="tab" data-bs-target="#destacadas" type="button" role="tab">Cartas Destacadas</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="estrategia-tab" data-bs-toggle="tab" data-bs-target="#estrategia" type="button" role="tab">Estrategias</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="rojoTabContent">
+            <!-- Tab 1: Galería completa -->
+            <div class="tab-pane fade show active" id="galeria" role="tabpanel">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <h2 class="mb-4">Galería de Fuego</h2>
+                        <section class="cartas-galeria">
+                            <div class="cartas-lista cartas-grid-3">
                 <figure><img
                         src="https://cards.scryfall.io/normal/front/d/4/d4372203-b930-4e6e-a351-e5b4581eb72b.jpg?1752944413"
                         alt="Carta 1" class="carta-img"></figure>
@@ -63,7 +87,102 @@
                         src="https://cards.scryfall.io/normal/front/d/0/d0b7cecf-b51b-4d30-b7e9-cd7976271e07.jpg?1730572713"
                         alt="Carta 10" class="carta-img"></figure>
             </div>
-        </section>
+                        </section>
+                    </div>
+                    
+                    <div class="col-lg-3">
+                        <div class="card border-danger mb-3">
+                            <div class="card-header bg-danger text-white">
+                                <strong>Características</strong>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="text-danger">⚡ Velocidad</h6>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-danger" style="width: 95%"></div>
+                                </div>
+                                <h6 class="text-danger">💥 Daño Directo</h6>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-danger" style="width: 90%"></div>
+                                </div>
+                                <h6 class="text-danger">🔥 Agresividad</h6>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-danger" style="width: 98%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card border-warning">
+                            <div class="card-body text-center">
+                                <h5 class="text-danger">Lema del Rojo</h5>
+                                <p class="fst-italic">"¡Actúa primero, piensa después!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Destacadas -->
+            <div class="tab-pane fade" id="destacadas" role="tabpanel">
+                <h3 class="text-center mb-4">Top 3 Cartas Rojas</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <h5 class="card-title text-danger">Lightning Bolt</h5>
+                                <p>La carta de daño directo más icónica de Magic.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <h5 class="card-title text-danger">Embercleave</h5>
+                                <p>Equipamiento legendario que define partidas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <h5 class="card-title text-danger">Goblin Guide</h5>
+                                <p>La criatura agresiva por excelencia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: Estrategias -->
+            <div class="tab-pane fade" id="estrategia" role="tabpanel">
+                <h3 class="mb-4">Estrategias del Rojo</h3>
+                <div class="accordion" id="estrategiaAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#aggro">
+                                🔥 Aggro Rojo
+                            </button>
+                        </h2>
+                        <div id="aggro" class="accordion-collapse collapse show" data-bs-parent="#estrategiaAccordion">
+                            <div class="accordion-body">
+                                Estrategia ultra-agresiva enfocada en reducir la vida del oponente lo más rápido posible con criaturas pequeñas y hechizos de daño directo.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#burn">
+                                💥 Burn
+                            </button>
+                        </h2>
+                        <div id="burn" class="accordion-collapse collapse" data-bs-parent="#estrategiaAccordion">
+                            <div class="accordion-body">
+                                Deck basado casi exclusivamente en hechizos de daño directo para eliminar al oponente sin depender de criaturas.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <div class="footer-container">

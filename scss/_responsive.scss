@@ -22,9 +22,150 @@
     }
 
     .header-text {
+        padding: 10px 15px;
+
         h1 {
-            font-size: 1.1em;
+            font-size: 1.3em;
             margin: 10px 0 8px 0;
+        }
+
+        p {
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+    }
+
+    // Hero sections responsive
+    .hero-azul,
+    .hero-negro {
+        padding: 30px 15px !important;
+
+        h1 {
+            font-size: 1.8em !important;
+        }
+
+        .lead {
+            font-size: 1em !important;
+        }
+
+        .stat-box {
+            margin-bottom: 15px;
+            padding: 15px !important;
+        }
+    }
+
+    // Layouts específicos mobile
+    .main-azul-layout,
+    .container-fluid {
+        padding: 0 10px;
+
+        .row {
+            margin: 0;
+        }
+
+        .sidebar-azul {
+            position: static !important;
+            margin-bottom: 20px;
+
+            .card {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    // Tabs mobile
+    .nav-pills,
+    .nav-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+
+        .nav-item {
+            flex-shrink: 0;
+
+            .nav-link {
+                font-size: 0.85em;
+                padding: 8px 12px;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    // Cards y stats mobile
+    .hover-lift {
+        transform: none !important;
+    }
+
+    .card {
+        margin-bottom: 15px;
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-header {
+            padding: 10px 15px;
+        }
+
+        .display-4 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+    }
+
+    // Tables responsive
+    .table-responsive {
+        font-size: 0.85em;
+
+        table {
+            min-width: 600px;
+        }
+
+        td,
+        th {
+            padding: 8px 6px;
+        }
+    }
+
+    // Accordion mobile
+    .accordion {
+        .accordion-button {
+            font-size: 0.9em;
+            padding: 12px 15px;
+        }
+
+        .accordion-body {
+            font-size: 0.85em;
+            padding: 12px 15px;
+        }
+    }
+
+    // Progress bars
+    .progress {
+        height: 6px !important;
+        margin-bottom: 8px;
+    }
+
+    // Badges y alerts
+    .badge {
+        font-size: 0.75em;
+        padding: 4px 8px;
+    }
+
+    .alert {
+        font-size: 0.9em;
+        padding: 12px 15px;
+
+        h5,
+        h6 {
+            font-size: 1.1em;
+        }
+
+        ul {
+            padding-left: 20px;
         }
     }
 
@@ -95,13 +236,18 @@
     }
 
     .cartas-lista {
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); // 2 columns
         gap: 4px;
+
+        .carta-img {
+            margin: auto;
+            max-width: 100%; // Ensures the image does not exceed the container width
+            transition: 0.2s ease; // Remove zoom effect
+            will-change: auto; // Reset will-change property
+        }
     }
 
-    .carta-img {
-        width: 60px;
-        border-radius: 7px;
-    }
 
     article {
         font-size: 0.96em;
@@ -152,6 +298,44 @@
 }
 
 @media (max-width: $bp-xs) {
+
+    .hero-azul,
+    .hero-negro {
+        padding: 20px 10px !important;
+
+        h1 {
+            font-size: 1.5em !important;
+        }
+
+        .display-3,
+        .display-4,
+        .display-5 {
+            font-size: 1.5em !important;
+        }
+    }
+
+    .card {
+        .card-body {
+            padding: 12px;
+        }
+
+        h2 {
+            font-size: 1.3em;
+        }
+
+        h3 {
+            font-size: 1.1em;
+        }
+    }
+
+    .nav-pills,
+    .nav-tabs {
+        .nav-link {
+            font-size: 0.8em;
+            padding: 6px 10px;
+        }
+    }
+
     .ruleta {
         max-width: 250px;
         max-height: 340px;

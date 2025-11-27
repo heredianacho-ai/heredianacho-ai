@@ -29,9 +29,262 @@
         
     </header>
     
-    <main class="main-galeria">
-        <section class="cartas-galeria">
-            <div class="cartas-lista">
+    <!-- Hero Banner -->
+    <section class="hero-azul py-5">
+        <div class="container text-center text-white">
+            <h1 class="display-3 fw-bold mb-3">🌊 El Poder del Azul 🌊</h1>
+            <p class="lead mb-4">Domina el campo de batalla con conocimiento, control y perfección</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="alert alert-info" role="alert" style="background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.3); backdrop-filter: blur(10px);">
+                        <strong>🧠 Filosofía:</strong> "La perfección se alcanza mediante el conocimiento absoluto. Cada decisión debe ser calculada, cada movimiento anticipado."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-azul-layout">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Sidebar izquierdo -->
+                <aside class="col-lg-3 sidebar-azul">
+                    <div class="card mb-3 shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0">Filosofía del Azul</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>"Perfección a través del conocimiento"</p>
+                            <ul class="list-unstyled">
+                                <li>🔮 <strong>Control total</strong></li>
+                                <li>📚 <strong>Conocimiento infinito</strong></li>
+                                <li>🌊 <strong>Dominio del tiempo</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3 shadow">
+                        <div class="card-header bg-info text-white">
+                            <h5 class="mb-0">Mecánicas Clave</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-primary">Contrahechizos</span>
+                            </div>
+                            <div class="mb-2">
+                                <span class="badge bg-info">Robo de cartas</span>
+                            </div>
+                            <div class="mb-2">
+                                <span class="badge bg-primary">Rebote</span>
+                            </div>
+                            <div class="mb-2">
+                                <span class="badge bg-info">Clonar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow">
+                        <div class="card-body text-center">
+                            <h6>Criaturas Emblemáticas</h6>
+                            <small>Magos • Esfinges • Leviatanes</small>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Contenido principal -->
+                <div class="col-lg-9">
+                    <!-- Tabs de navegación -->
+                    <ul class="nav nav-pills mb-4" id="azulTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button">Vista General</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="estrategias-tab" data-bs-toggle="tab" data-bs-target="#estrategias" type="button">Estrategias</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="galeria-tab" data-bs-toggle="tab" data-bs-target="#galeria" type="button">Galería de Cartas</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="matchups-tab" data-bs-toggle="tab" data-bs-target="#matchups" type="button">Matchups</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="azulTabContent">
+                        <!-- Tab 1: Overview -->
+                        <div class="tab-pane fade show active" id="overview" role="tabpanel">
+                            <!-- Stats Cards -->
+                            <div class="row mb-4">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card text-center shadow-sm hover-lift">
+                                        <div class="card-body">
+                                            <div class="display-4 text-primary mb-2">🎯</div>
+                                            <h2 class="text-primary mb-0">85%</h2>
+                                            <p class="text-muted mb-0">Control del juego</p>
+                                            <small class="text-muted">Top tier en meta competitivo</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card text-center shadow-sm hover-lift">
+                                        <div class="card-body">
+                                            <div class="display-4 text-info mb-2">📚</div>
+                                            <h2 class="text-info mb-0">92%</h2>
+                                            <p class="text-muted mb-0">Ventaja de cartas</p>
+                                            <small class="text-muted">Líder en card advantage</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card text-center shadow-sm hover-lift">
+                                        <div class="card-body">
+                                            <div class="display-4 text-primary mb-2">🏆</div>
+                                            <h2 class="text-primary mb-0">78%</h2>
+                                            <p class="text-muted mb-0">Win rate torneos</p>
+                                            <small class="text-muted">Promedio última temporada</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fortalezas y Debilidades -->
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="card shadow h-100">
+                                        <div class="card-header bg-success text-white">
+                                            <h5 class="mb-0">✅ Fortalezas</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="list-unstyled mb-0">
+                                                <li class="mb-3">
+                                                    <strong>🚫 Contrahechizos:</strong>
+                                                    <div class="progress" style="height: 8px;">
+                                                        <div class="progress-bar bg-success" style="width: 95%"></div>
+                                                    </div>
+                                                    <small class="text-muted">Mejor control de stack del juego</small>
+                                                </li>
+                                                <li class="mb-3">
+                                                    <strong>💬 Robo de cartas:</strong>
+                                                    <div class="progress" style="height: 8px;">
+                                                        <div class="progress-bar bg-info" style="width: 98%"></div>
+                                                    </div>
+                                                    <small class="text-muted">Sin rival en ventaja de recursos</small>
+                                                </li>
+                                                <li class="mb-0">
+                                                    <strong>🔄 Manipulación:</strong>
+                                                    <div class="progress" style="height: 8px;">
+                                                        <div class="progress-bar bg-primary" style="width: 88%"></div>
+                                                    </div>
+                                                    <small class="text-muted">Rebote, robo, control de permanentes</small>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card shadow h-100">
+                                        <div class="card-header bg-warning text-dark">
+                                            <h5 class="mb-0">⚠️ Debilidades</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="list-unstyled mb-0">
+                                                <li class="mb-3">
+                                                    <strong>⚔️ Remoción de permanentes:</strong>
+                                                    <div class="progress" style="height: 8px;">
+                                                        <div class="progress-bar bg-danger" style="width: 35%"></div>
+                                                    </div>
+                                                    <small class="text-muted">Limitado contra artefactos y encantamientos</small>
+                                                </li>
+                                                <li class="mb-3">
+                                                    <strong>🦕 Criaturas pequeñas:</strong>
+                                                    <div class="progress" style="height: 8px;">
+                                                        <div class="progress-bar bg-warning" style="width: 45%"></div>
+                                                    </div>
+                                                    <small class="text-muted">Vulnerable a estrategias aggro rápidas</small>
+                                                </li>
+                                                <li class="mb-0">
+                                                    <strong>⏱️ Velocidad:</strong>
+                                                    <div class="progress" style="height: 8px;">
+                                                        <div class="progress-bar bg-danger" style="width: 40%"></div>
+                                                    </div>
+                                                    <small class="text-muted">Requiere tiempo para establecer control</small>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Quote Card -->
+                            <div class="card shadow-lg" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white;">
+                                <div class="card-body p-4">
+                                    <blockquote class="blockquote mb-0">
+                                        <p class="lead fst-italic">"🌊 El conocimiento es poder. El poder es control. El control es victoria. 🌊"</p>
+                                        <footer class="blockquote-footer text-white-50 mt-2">Jace Beleren, Planeswalker Azul</footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 2: Estrategias -->
+                        <div class="tab-pane fade" id="estrategias" role="tabpanel">
+                            <h3 class="mb-4">Arquetipos de Mazos Azules</h3>
+                            <div class="accordion" id="estrategiasAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#control">
+                                            🚫 Control Azul Puro
+                                        </button>
+                                    </h2>
+                                    <div id="control" class="accordion-collapse collapse show" data-bs-parent="#estrategiasAccordion">
+                                        <div class="accordion-body">
+                                            <strong>Objetivo:</strong> Negar todas las jugadas del oponente y ganar por agotamiento.<br>
+                                            <strong>Claves:</strong> Counterspell, Cancel, Dissolve, Negate, Mana Leak<br>
+                                            <strong>Condición de victoria:</strong> Criaturas voladoras grandes o mill (descarte de biblioteca)<br>
+                                            <span class="badge bg-primary mt-2">Dificultad: Alta</span>
+                                            <span class="badge bg-info mt-2">Costo: Medio-Alto</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tempo">
+                                            ⚡ Tempo Azul
+                                        </button>
+                                    </h2>
+                                    <div id="tempo" class="accordion-collapse collapse" data-bs-parent="#estrategiasAccordion">
+                                        <div class="accordion-body">
+                                            <strong>Objetivo:</strong> Criaturas eficientes con protección mediante contrahechizos.<br>
+                                            <strong>Claves:</strong> Delver of Secrets, Snapcaster Mage, Sprite Dragon<br>
+                                            <strong>Estilo:</strong> Agresivo pero protegido, presiona mientras controla<br>
+                                            <span class="badge bg-primary mt-2">Dificultad: Media</span>
+                                            <span class="badge bg-success mt-2">Popularidad: Alta</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#combo">
+                                            🔮 Combo Azul
+                                        </button>
+                                    </h2>
+                                    <div id="combo" class="accordion-collapse collapse" data-bs-parent="#estrategiasAccordion">
+                                        <div class="accordion-body">
+                                            <strong>Objetivo:</strong> Ensamble de piezas para combo ganador instantáneo.<br>
+                                            <strong>Ejemplos:</strong> High Tide Storm, Polymorph, Laboratory Maniac + draw deck<br>
+                                            <strong>Protección:</strong> Usa contrahechizos para proteger el combo<br>
+                                            <span class="badge bg-danger mt-2">Dificultad: Muy Alta</span>
+                                            <span class="badge bg-warning text-dark mt-2">Riesgo: Alto</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 3: Galería -->
+                        <div class="tab-pane fade" id="galeria" role="tabpanel">
+                            <section class="cartas-galeria">
+                                <h3 class="mb-4">🃏 Cartas Icónicas del Azul</h3>
+                                <div class="cartas-lista">
                 <figure><img
                         src="https://cards.scryfall.io/normal/front/4/f/4f616706-ec97-4923-bb1e-11a69fbaa1f8.jpg?1751282477"
                         alt="Carta 1" class="carta-img"></figure>
@@ -63,7 +316,85 @@
                         src="https://cards.scryfall.io/normal/front/f/f/ff3b0dba-0207-4249-bdab-e807c76ce39e.jpg?1730572717"
                         alt="Carta 10" class="carta-img"></figure>
             </div>
-        </section>
+                                </section>
+                        </div>
+
+                        <!-- Tab 4: Matchups -->
+                        <div class="tab-pane fade" id="matchups" role="tabpanel">
+                            <h3 class="mb-4">⚔️ Análisis de Matchups</h3>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="table-primary">
+                                        <tr>
+                                            <th>Oponente</th>
+                                            <th>Win Rate</th>
+                                            <th>Dificultad</th>
+                                            <th>Estrategia Clave</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="badge" style="background: #d32f2f;">🔥 Rojo Aggro</span></td>
+                                            <td>
+                                                <strong class="text-success">65%</strong>
+                                                <div class="progress" style="height: 6px;">
+                                                    <div class="progress-bar bg-success" style="width: 65%"></div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-warning text-dark">Media</span></td>
+                                            <td><small>Sobrevivir early game, dominar con card advantage</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="badge" style="background: #388e3c;">🌳 Verde Ramp</span></td>
+                                            <td>
+                                                <strong class="text-danger">45%</strong>
+                                                <div class="progress" style="height: 6px;">
+                                                    <div class="progress-bar bg-danger" style="width: 45%"></div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-danger">Difícil</span></td>
+                                            <td><small>Counterspells para amenazas grandes, presionar con tempo</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="badge" style="background: #222;">⚰️ Negro Midrange</span></td>
+                                            <td>
+                                                <strong class="text-warning">52%</strong>
+                                                <div class="progress" style="height: 6px;">
+                                                    <div class="progress-bar bg-warning" style="width: 52%"></div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-warning text-dark">Media</span></td>
+                                            <td><small>Matchup de recursos, ganar por card advantage</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="badge" style="background: #fffbe7; color: #b48a2c;">💫 Blanco Weenie</span></td>
+                                            <td>
+                                                <strong class="text-success">70%</strong>
+                                                <div class="progress" style="height: 6px;">
+                                                    <div class="progress-bar bg-success" style="width: 70%"></div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-success">Fácil</span></td>
+                                            <td><small>Board wipes y contrahechizos anulan estrategia</small></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="alert alert-info mt-4" role="alert">
+                                <h5 class="alert-heading">💡 Tips para jugar Azul</h5>
+                                <ul class="mb-0">
+                                    <li>Sé paciente - no gastes contrahechizos en amenazas menores</li>
+                                    <li>Prioriza el robo de cartas para mantener respuestas</li>
+                                    <li>Estudia el meta para saber qué counters incluir en el mazo</li>
+                                    <li>Practica el bluffing - a veces solo mostrar maná abierto es suficiente</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <div class="footer-container">
