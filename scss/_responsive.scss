@@ -237,14 +237,14 @@
 
     .cartas-lista {
         display: grid; 
-        grid-template-columns: repeat(2, 1fr); // 2 columns
+        grid-template-columns: repeat(2, 1fr);
         gap: 4px;
 
         .carta-img {
             margin: auto;
-            max-width: 100%; // Ensures the image does not exceed the container width
-            transition: 0.2s ease; // Remove zoom effect
-            will-change: auto; // Reset will-change property
+            max-width: 100%; 
+            transition: 0.2s ease; 
+            will-change: auto; 
         }
     }
 
